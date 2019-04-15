@@ -1,3 +1,5 @@
+package say
+
 class SayHello(val name:String) {
 
     fun sayHello() {

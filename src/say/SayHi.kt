@@ -1,3 +1,5 @@
+package say
+
 class SayHi {
     fun hi() {
         println("Hi, Kotlin")
