@@ -2,10 +2,11 @@ package operations
 
 fun main(args: Array<String>) {
 
-    //Arithmetic Operations
-    val myAge = Integer.parseInt(args[0]) //75
+    //val myAge = Integer.parseInt(args[0]) //68
+    val myAge = 68
     val pi = 3.142
 
+    //Arithmetic Operations
     val myWealth = myAge * pi
     println("myWealth : $myWealth")
 
@@ -24,4 +25,5 @@ fun main(args: Array<String>) {
     println("Range Check 1 : " + (myAge in 18..45))
     println("Range Check 2 : " + (myAge !in 49..75))
     println("Range Check 3 : " + (myAge in 75 downTo 46))
+    println("Range Check 3 : " + (myAge in 46 .. 75))
 }

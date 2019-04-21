@@ -6,14 +6,17 @@ fun main(args: Array<String>) {
     //println(separateHi(args[0]))
     //SayHi().hi()
 
-    println(doTheMath(42, 53))
+    println(doTheMath(numOne = 42, numTwo = 53))
     println(doTheMath(34)) //default argument
+    doTheMath()
+
     println(doTheMath(numTwo = 123, numOne = 456)) //named argument
 
     val items = intArrayOf(1, 2, 3, 4, 5)
-    withVarArgs(12, 23, 34, *items, 67)
+    withVarArgs(12, 23, 34, *items, 67) //variable argument
 
     val sayHi = SayHi()
+    sayHi.hi()
     val double = sayHi callThis 43
     println("double = $double")
 }
@@ -32,7 +35,7 @@ class SayHi {
     }
 }
 
-fun doTheMath(numOne: Int, numTwo: Int = 12): Int {
+fun doTheMath(numOne: Int = 24, numTwo: Int = 12): Int {
     return numOne * numTwo
 }
 

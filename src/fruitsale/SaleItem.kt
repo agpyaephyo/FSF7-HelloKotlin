@@ -1,4 +1,5 @@
 package fruitsale
 
-class SaleItem(val fruitType: FruitType, var quantity: Int) {
+class SaleItem(val fruitType: FruitType, quantity: Int) {
+    val quantity = quantity
 }

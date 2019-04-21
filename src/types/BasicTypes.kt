@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
     val floatConstant: Float = 10.5f
     println("floatConstant : $floatConstant")
 
+
     //Inferred Type
     val doubleConstant = 12.34
     //doubleConstant = 13.45
@@ -29,23 +30,24 @@ fun main(args: Array<String>) {
     //myName = "Michael"
     println("myName : $myName")
 
+
     //String optional type
-    val className: String
+    //val className: String
     //className = "PADC"
     //val className : String = null
-    //val className : String? = null
-    //println("className : $className")
+    val className: String? = null
+    println("className : $className")
 
     //Explicit conversion to bigger type.
-    //val myLong : Long = intConstant
+    val myLong: Long = intConstant.toLong()
 
     //Arrays
     val intArray = arrayOf(1, 2, 3)
-    //val intArray : Array<Int> = arrayOf(1, 2, 3)
+    //val intArray: Array<Int> = arrayOf(1, 2, 3)
 
     val doubleArray = arrayOf(1.2, 2.3, 3.4, 5)
     //val doubleArray : Array<Any> = arrayOf(1.2, 2.3, 3.4, 5)
-    //val doubleArray : Array<Double> = arrayOf(1.2, 2.3, 3.4, 5.0)
+    //val doubleArray: Array<Double> = arrayOf(1.2, 2.3, 3.4, 5.0)
 
     println("intArray : ${intArray.size}")
     println("doubleArray : ${doubleArray.size}")
@@ -59,8 +61,11 @@ fun main(args: Array<String>) {
     //intArray = arrayOf(4, 5, 6)
 
     println()
-    val asc = Array(5) { i -> (i * i) }
-    asc.forEach { println("Number : $it") }
+    val asc = Array(5) { it * it + 3.142f }
+    asc.forEach {eachValue  ->
+        val result = eachValue * 3.142
+        println("Number : $result")
+    }
 
     val intPrimitiveArray: IntArray = intArrayOf(23, 34, 45, 56)
 }

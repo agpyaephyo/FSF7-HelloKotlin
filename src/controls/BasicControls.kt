@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
 
     val intMaxTwo = if (intOne > intTwo) intOne else intTwo
 
-    when (yourInt) {
+    when (yourInt + 2) {
         4 -> println("legacy.")
         16 -> println("very old.")
         32 -> println("before dot com boom.")
@@ -52,8 +52,19 @@ fun main(args: Array<String>) {
     //Using "when" in the place of if-else-if.
     when {
         yourInt > intOne -> println("Better than 64. Good.")
+        intOne in 212..340 -> println("Excellent")
         else -> println("Should be at least 64.")
     }
+
+    /*
+    if(yourInt > intOne) {
+        println("Better than 64. Good.")
+    } else if(intOne in 212..340) {
+        println("Excellent")
+    } else {
+        println("Should be at least 64.")
+    }
+    */
 
     val intArray = arrayOf(12, 23, 34, 45, 56, 67, 78, 89, 90)
     for (int in intArray) {
@@ -77,6 +88,10 @@ fun main(args: Array<String>) {
         println("downTo with Step : $int")
     }
 
+    for (int in intArray) {
+        println("intArray : $int")
+    }
+
     //iterating the collection with index
     for (int in intArray.indices) {
         println("intArray with indices: ${intArray[int]}")
@@ -89,4 +104,8 @@ fun main(args: Array<String>) {
     while (intArray[3] > 0) {
         println("intArray with while : ${--intArray[3]}")
     }
+
+    do {
+        println("intArray with while : ${--intArray[3]}")
+    } while (intArray[3] > 0)
 }
